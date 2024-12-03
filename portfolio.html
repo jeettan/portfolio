@@ -1,0 +1,626 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <title>Portfolio Website</title>
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz
+,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,
+100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;
+1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;
+1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <style text="text/css">
+        @keyframes anim {
+
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        * {
+            font-family: 'Poppins';
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+
+        .header img {
+
+            float: left;
+            margin-left: 16px;
+
+        }
+
+        .header {
+
+            position: sticky;
+            top: 0;
+            background-color: white;
+            width: 100%;
+
+            height: 50px;
+        }
+
+        .float-right {
+
+            float: right;
+            display: flex;
+            margin-right: 30px;
+        }
+
+        .float-right p {
+
+            margin: 10px;
+        }
+
+        h2 {
+
+            font-size: 52px;
+        }
+
+        .hero {
+
+            width: 100%;
+            height: 80vh;
+            animation: anim 2s ease;
+            background-color: #C70039;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            z-index: -1;
+            padding-top: 30px;
+        }
+
+        .hero h2 {
+
+            color: white;
+            margin-bottom: 0px;
+        }
+
+        .hero p {
+
+            color: white;
+            font-size: 20px;
+        }
+
+        .right-hero {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-right: 5%;
+        }
+
+
+        .left-hero {
+
+            width: 50%;
+            margin-left: 10%;
+        }
+
+        .left-hero img {
+
+            width: 500px;
+
+        }
+
+        .hero button {
+
+            padding: 10px 16px 10px 16px;
+            margin-top: 15px;
+            background-color: darkred;
+            border: none;
+            border-radius: 9px;
+            background-size: cover;
+            color: white;
+        }
+
+        .hero button:hover {
+
+            transform: scale(125%);
+            transition: transform .2s;
+            cursor: pointer;
+        }
+
+
+        a {
+
+            text-decoration: none;
+            color: black;
+        }
+
+        .description {
+            width: 100%;
+            margin-bottom: 30px;
+            margin-top: 30px;
+
+        }
+
+        .description.in-view {
+            animation: anim 2s ease;
+
+        }
+
+        .description h2 {
+
+            float: right;
+            margin-right: 40px;
+        }
+
+        .description img {
+
+            margin-left: 60px;
+        }
+
+        .description h3 {
+
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .techstack {
+            display: grid;
+            text-align: center;
+            justify-items: center;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .techstack1 {
+
+            background-color: #C70039;
+            height: 80vh;
+            text-align: center;
+            justify-items: center;
+            width: 100%;
+
+        }
+
+        .techstack1.in-view {
+
+            animation: anim 2s ease;
+
+        }
+
+        .techstack1 h2 {
+
+            padding-top: 40px;
+            color: white;
+        }
+
+        .techstack-item {
+
+            background-color: white;
+            height: 300px;
+            width: 300px;
+            border-right: 1px solid lightgray;
+            padding: 20px;
+        }
+
+        .hero-one {
+
+            display: flex;
+            flex-direction: row;
+        }
+
+        .projects.in-view {
+
+            animation: anim 2s ease;
+        }
+
+        .projects h2 {
+
+            padding-left: 40px;
+
+        }
+
+        .grid {
+
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+        }
+
+        .grid-element img {
+
+            border-radius: 15px;
+
+        }
+
+        .grid-element img:hover {
+
+            opacity: 0.4;
+            cursor: pointer;
+            background-color: black;
+        }
+
+        .footer {
+
+            height: 400px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .footer p {
+
+            text-align: center;
+        }
+
+        .row {
+
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .tech-two-stack {
+
+            width: 60%;
+            height: 300px;
+            background-color: white;
+            align-items: center;
+
+        }
+
+        @media screen and (min-width: 1600px) {
+            .tech-two-stack {
+
+                height: 40%;
+                width: 43%;
+
+            }
+        }
+
+        @media screen and (min-height: 800px) {
+            .hero-two img {
+
+                transform: translateY(95%);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .hero {
+
+                width: 100%;
+                height: 450px;
+            }
+
+            .left-hero img {
+
+
+                width: 200px;
+                height: 200px;
+            }
+
+            .right-hero h2 {
+
+                font-size: 24px;
+            }
+
+            .right-hero p {
+
+                font-size: 12px;
+            }
+
+            .hero button {
+
+                margin: 0;
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .hero-two img {
+
+                transform: scale(60%) translateY(-30%);
+            }
+
+            .description {
+
+                padding: 20px;
+
+
+            }
+
+            .description h2 {
+
+                float: center;
+                text-align: center;
+                font-size: 25px;
+
+            }
+
+
+
+            .description h3 {
+
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+            .techstack-item {
+
+                height: 80px;
+                width: 30px;
+                border-right: none;
+                padding-top: 14px;
+                padding-left: 0;
+            }
+
+            .techstack-item h3 {
+
+                font-size: 15px;
+            }
+
+            .techstack-item p {
+
+                font-size: 10px
+            }
+
+            .techstack-item img {
+
+                width: 40px;
+                height: 40px;
+            }
+
+            .tech-two-stack {
+
+                width: 100%;
+                height: 61%;
+            }
+
+
+            .techstack1 h2 {
+
+                font-size: 30px;
+            }
+
+            .techstack1 {
+
+                height: 50vh;
+            }
+
+
+            .grid {
+
+                display: grid;
+                grid-template-columns: repeat(1, 25%);
+
+            }
+
+            .grid-element figcaption {
+
+                width: 300px;
+            }
+
+            .techstack {
+                display: grid;
+                text-align: center;
+                justify-items: center;
+                grid-template-columns: repeat(3, 30%);
+            }
+
+        }
+    </style>
+
+    <script src="portfolio.js"></script>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="">
+            <img src="images/jtc.png" width="50px" height="50px" />
+        </a>
+        <div class="float-right">
+            <a href="">
+                <p>Home</p>
+            </a>
+            <a href="mailto:jeetta3@gmail.com">
+                <p>Contact</p>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero">
+        <div class="hero-one">
+            <div class="left-hero">
+                <img src="images/vector-laptop.webp">
+            </div>
+            <div class="right-hero">
+
+                <h2>Frontend Developer, aspiring fullstack.</h2>
+                <p> Hi! My name is Jeet, I'm a frontend developer based in Bangkok. <br>I am passionate about
+                    programming and technology. Welcome to my portfolio. </p>
+                <a href="mailto:jeetta3@gmail.com"><button>Contact Me</button></a>
+            </div>
+        </div>
+        <div class="hero-two">
+            <img src="images/avatar.png" width="120px;">
+        </div>
+    </div>
+
+    <div class="description animate">
+
+
+        <h2>&lt;Passionate about programming and tech/&gt;</h2>
+        <img src="images/stretch.jpg" style="width:65%;" />
+
+        <h3>I have always been fascinated with computers from a very young age.<br>
+            This led me to decide to further my studies in computer science at the <br>
+            pretigious Keio University in Japan, when I was 18. This was the first <br>
+            time I started to learn how to code and create web apps.
+        </h3>
+
+        <h3>My approach to softare engineering is methodical, with a keen focus on <br>
+            undertaking projects that challenge my understanding, while maintaining<br>
+            an eye to detail.
+        </h3>
+    </div>
+
+    <div class="techstack1 animate">
+        <h2>Language & Frameworks</h2>
+        <div class="tech-two-stack">
+            <div class="techstack">
+                <div class="techstack-item"><img src="images/js.webp" width="80px" height="80px" />
+                    <h3>Javascript</h3>
+                    <p>React</p>
+                    <p>HTML, CSS</p>
+                    <p>Node.JS</p>
+                </div>
+                <div class="techstack-item"> <img src="images/python.png" width="80px" height="80px" />
+                    <h3>Python</h3>
+                    <p>TKInter</p>
+                    <p>Scikit-learn</p>
+                    <p>Flask</p>
+                </div>
+                <div class="techstack-item"><img src="images/php.png" width="120px" height="80px" />
+                    <h3>Backend Languages</h3>
+                    <p>SQL/MYSQL</p>
+                    <p>MongoDB</p>
+                    <p>PHP</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="projects animate">
+
+        <h2>Projects </h2>
+
+        <div class="grid">
+            <div class="grid-element">
+                <figure>
+                    <a href="https://github.com/jeettan/javascript/tree/main/login-frontend" target="_blank">
+                        <img src="projects/1.png" width="300px" /></a>
+                    <figcaption>Login App Frontend Design</figcaption>
+                    <figcaption><b>Language Used:</b> CSS/HTML</figcaption>
+                </figure>
+            </div>
+            <div class="grid-element">
+                <figure>
+                    <a href="https://github.com/jeettan/javascript/tree/main/airbnb-clone" target="_blank">
+                        <img src="projects/2.png" width="300px" height="200px" />
+                    </a>
+                    <figcaption>AirBnB Web Clone</figcaption>
+                    <figcaption><b>Language Used:</b> CSS/HTML</figcaption>
+                </figure>
+            </div>
+
+            <div class="grid-element">
+                <figure>
+                    <a href="https://github.com/jeettan/javascript/tree/main/momentum-present" target="_blank">
+                        <img src="projects/3.png" width="300px" height="200px" /></a>
+                    <figcaption>Momentum Google Chrome Extension Clone</figcaption>
+                    <figcaption><b>Language Used:</b> Javascript</figcaption>
+                </figure>
+            </div>
+            <div class="grid-element">
+                <figure>
+                    <a href="https://github.com/jeettan/REACT-APP" target="_blank">
+                        <img src="projects/4.png" width="300px" height="200px" />
+                    </a>
+                    <figcaption>ReactJS video storage</figcaption>
+                    <figcaption><b>Language Used:</b> React/NodeJS</figcaption>
+                </figure>
+            </div>
+
+            <div class="grid-element">
+                <figure>
+                    <a href="https://github.com/jeettan/python/tree/main/LE-app-v2" target="_blank">
+                        <img src="projects/5.png" width="300px" height="200px" />
+                    </a>
+                    <figcaption>Health App Mockup</figcaption>
+                    <figcaption><b>Language Used:</b> Python/TKinter</figcaption>
+                </figure>
+            </div>
+            <div class="grid-element">
+                <figure>
+                    <a href="https://github.com/jeettan/php/tree/main/coffee-app" target="_blank">
+                        <img src="projects/6.png" width="300px" height="200px" />
+                    </a>
+                    <figcaption>Coffee Accounting App</figcaption>
+                    <figcaption><b>Language Used:</b> PHP</figcaption>
+                </figure>
+            </div>
+            <div class="grid-element">
+                <figure>
+                    <a href="https://github.com/jeettan/php/tree/main/e-comm-project" target="_blank">
+                        <img src="projects/7.png" width="300px" height="200px" />
+                    </a>
+                    <figcaption>E-commerce App w/ PHP</figcaption>
+                    <figcaption><b>Language Used:</b> PHP</figcaption>
+                </figure>
+            </div>
+            <div class="grid-element">
+                <figure>
+                    <a href="https://github.com/jeettan/google-trans" target="_blank">
+                        <img src="projects/8.png" width="300px" height="200px" />
+                    </a>
+                    <figcaption>Translate Application Mockup</figcaption>
+                    <figcaption><b>Language Used:</b>ReactJS</figcaption>
+                </figure>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+
+        <div id="row-pic">
+            <a href="">
+                <img src="images/JTC-removebg.png" width="150px" height="175px" />
+            </a>
+        </div>
+        <h3>No Code No Life.</h3>
+
+        <div class="row">
+            <a href="https://github.com/jeettan" target="_blank">
+                <img src="logos/github.png" width="40px" height="40px" />
+            </a>
+            <a href="https://www.linkedin.com/in/jeettanofficial/">
+                <img src="logos/link-in.png" width="50px" height="50px" />
+            </a>
+            <a href="">
+                <img src="logos/facebook.png" width="50px" height="50px" />
+            </a>
+        </div>
+
+        <p>Contact me via email here: <br> jeetta3@gmail.com</p>
+
+
+    </div>
+
+</body>
+
+</html>
